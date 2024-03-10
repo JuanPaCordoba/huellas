@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+            integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <link rel="icon" href="images/icon.ico">
+
+
+
+
+        <title>Login | Diarymedi</title>
+    </head>
+<body>
+  <div class="login-container">
+    <form id="login-form" action="http://localhost:8000/login" method="POST">
+      <div class="logo">
+        <img src="images/logo.png" alt="logo.png" class="logo-img">   
+      </div>
+    <div class="input-group">
+        <div class="input-field">
+            <input type="text" class="input-box" id="username" required>
+            <label for="username">Usuario</label>
+        </div>
+
+      <div class="input-field">
+        <input type="password" class="input-box" id="password" required>
+        <label for="password">Password</label>
+        <div class="eye-area">
+            <div class="eye-box" onclick="myLogPassword()">
+                <i class="fa-regular fa-eye" id="eye"></i>
+                <i class="fa-regular fa-eye-slash" id="eye-slash"></i>
+            </div>
+        </div>
+    </div>
+
+      <button type="submit">Iniciar Sesión</button>
+    </form>
+
+    <div id="error-message" class="error-message">Credenciales incorrectas. Por favor, inténtalo de nuevo.</div>
+    
+    <div class="forgot-password">
+      <a href="#">¿Olvidaste tu contraseña?</a>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
