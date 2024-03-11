@@ -1,53 +1,102 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-            integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-            crossorigin="anonymous" referrerpolicy="no-referrer" />
-            <link rel="icon" href="images/icon.ico">
-
-
-
-
-        <title>Login | Diarymedi</title>
-    </head>
-<body>
-  <div class="login-container">
-    <form id="login-form" action="http://localhost:8000/login" method="POST">
-      <div class="logo">
-        <img src="images/logo.png" alt="logo.png" class="logo-img">   
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="signin-signup">
+        <form action="" class="sign-in-form">
+          <div class="title">
+            <img src="images/logo2.png" alt="logo de la empresa" class="logo" />
+          </div>
+          <div class="input-field">
+            <i class="fas fa-user"></i>
+            <input type="text" placeholder="Username" />
+          </div>
+          <div class="input-field">
+            <i class="fas fa-lock"></i>
+            <input type="password" placeholder="Password" />
+          </div>
+          <input type="submit" value="Login" class="btn" />
+          <p class="social-text">Or Sign in with social platform</p>
+          <div class="social-media">
+            <a href="#" class="social-icon">
+              <i class="fab fa-facebook"></i>
+            </a>
+            <a href="" class="social-icon">
+              <i class="fab fa-google"></i>
+            </a>
+          </div>
+          <p class="account-text">
+            Don't have an account? <a href="#" id="sign-up-btn2">Sign up</a>
+          </p>
+        </form>
+        <form action="" class="sign-up-form">
+          <div class="title">
+            <img src="images/logo2.png" alt="logo de la empresa" class="logo" />
+          </div>
+          <div class="input-field">
+            <i class="fas fa-user"></i>
+            <input type="text" placeholder="Username" />
+          </div>
+          <div class="input-field">
+            <i class="fas fa-envelope"></i>
+            <input type="text" placeholder="Email" />
+          </div>
+          <div class="input-field">
+            <i class="fas fa-lock"></i>
+            <input type="password" placeholder="Password" />
+          </div>
+          <input type="submit" value="Sign up" class="btn" />
+          <p class="social-text">Or Sign in with social platform</p>
+          <div class="social-media">
+            <a href="#" class="social-icon">
+              <i class="fab fa-facebook"></i>
+            </a>
+            <a href="" class="social-icon">
+              <i class="fab fa-google"></i>
+            </a>
+          </div>
+          <p class="account-text">
+            Already have an account? <a href="#" id="sign-in-btn2">Sign in</a>
+          </p>
+        </form>
       </div>
-    <div class="input-group">
-        <div class="input-field">
-            <input type="text" class="input-box" id="username" required>
-            <label for="username">Usuario</label>
+      <div class="panels-container">
+        <div class="panel left-panel">
+          <div class="content">
+            <h3>New In The Family?</h3>
+            <p>
+              Here, every little paw is welcomed like a star,cozy rooms and
+              top-quality care. Trust us to give your furry friend an
+              unforgettable stay while you're away!
+            </p>
+            <button class="btn" id="sign-in-btn">Sign in</button>
+          </div>
         </div>
-
-      <div class="input-field">
-        <input type="password" class="input-box" id="password" required>
-        <label for="password">Password</label>
-        <div class="eye-area">
-            <div class="eye-box" onclick="myLogPassword()">
-                <i class="fa-regular fa-eye" id="eye"></i>
-                <i class="fa-regular fa-eye-slash" id="eye-slash"></i>
-            </div>
+        <div class="panel right-panel">
+          <div class="content">
+            <h3>New In The Family?</h3>
+            <p>
+              Here, every little paw is welcomed like a star,cozy rooms and
+              top-quality care. Trust us to give your furry friend an
+              unforgettable stay while you're away!
+            </p>
+            <button class="btn" id="sign-up-btn">Sign up</button>
+          </div>
         </div>
+      </div>
     </div>
-
-      <button type="submit">Iniciar Sesión</button>
-    </form>
-
-    <div id="error-message" class="error-message">Credenciales incorrectas. Por favor, inténtalo de nuevo.</div>
-    
-    <div class="forgot-password">
-      <a href="#">¿Olvidaste tu contraseña?</a>
-    </div>
-  </div>
-
-  <script src="script.js"></script>
-</body>
+    <script src="js/scripts.js"></script>
+  </body>
 </html>
