@@ -29,7 +29,7 @@
                                     <a href="login.html" class="nav-opcion fw-7">About Us</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="login.html" class="nav-opcion fw-7">Services</a>
+                                    <a href="/#/service" class="nav-opcion fw-7">Services</a>
                                 </li>
                                 <li class="nav-item">
                                     <a href="login.html" class="nav-opcion fw-7">Contact</a>
