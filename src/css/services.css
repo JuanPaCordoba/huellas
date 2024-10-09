@@ -100,6 +100,17 @@ body {
     font-weight: 300;
 
 }
+/*.submenu {
+    display: none;
+    position: absolute;
+    background-color: #c01111;
+    padding: 10px;
+    z-index: 2; 
+}
+
+.nav-item:hover .submenu {
+    display: block;
+}*/
 /*------------------------------------------------------------------------*/
 @media(min-aspect-ratio:16/9) {
     .back-video {
@@ -129,44 +140,34 @@ body {
     z-index: 1;
 }
 
-.video-container .back-video {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-}
-
 .video-container .content h1 {
-    font-size: 80px;
+    font-size: 5vw; /* Utiliza un tamaño de fuente relativo */
     font-weight: 600;
     color: #fff;
     transition: 0.5s;
 }
 
-.video-container .content h1:hover {
-    -webkit-text-stroke: 2px #fff;
-    color: transparent;
+.video-container .content p {
+    font-size: 2vw; /* Tamaño de fuente relativo */
+    margin: 0; /* Elimina el margen para evitar desbordamiento */
 }
 
 .video-container .content a {
     text-decoration: none;
     display: inline-block;
     color: #fff;
-    font-size: 24px;
-    border: 2px;
+    font-size: 1.5vw; /* Tamaño de fuente relativo */
+    border: 2px solid transparent; /* Agrega un borde transparente */
     background-color:  var(--clr-blue);
-    padding: 14px 70px;
+    padding: 2vw 5vw; /* Padding relativo */
     border-radius: 50px;
-    margin-top: 20px;
+    margin-top: 2vw; /* Margen superior relativo */
 }
+
+/* Estilos adicionales para hover */
 .video-container .content a:hover {
-    text-decoration: none;
-    display: inline-block;
     color: var(--clr-black);
-    font-size: 24px;
     background-color: #fff;
-    padding: 14px 70px;
-    border-radius: 50px;
-    margin-top: 20px;
 }
 
 /*--------------------------------------------------*/
@@ -235,7 +236,7 @@ button {
     display: inline-block;
     padding: 75px;
     padding-top: 10px;
-    background-image: url('/public/images/logininicial-removebg-preview.png');
+    background-image: url('../images/logininicial-removebg-preview.png');
     background-size: contain;
     background-repeat: no-repeat;
     transition: background-image 0.3s ease;
@@ -243,7 +244,7 @@ button {
 }
 
 .nav-link:hover {
-    background-image: url('/public/images/perros-removebg-preview.png');
+    background-image: url('../images/perros-removebg-preview.png');
 }
 
 .navbar-brand .brand-text {
@@ -310,31 +311,6 @@ button {
     line-height: 1.6667;
 }
 
-.services-list {
-    margin-top: calc(83px - 18.5px);
-    margin-bottom: -18.5px;
-    margin-right: -18.5px;
-    margin-left: -18.5px;
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.services-item {
-    box-shadow: 10px 40px 50px 0px #e5e9f666;
-    background-color: var(--clr-white);
-    border-radius: 20px;
-    width: 350px;
-    min-height: 354px;
-    padding: 46px 38px;
-    margin: 18.5px auto;
-    width: calc(33.3333% - 37px);
-    transition: var(--transition-default);
-}
-
-.services-item:hover {
-    box-shadow: rgba(0, 0, 0, 0.1) 0 20px 25px -5px, rgba(0, 0, 0, 0.04) 0 10px 10px -5px;
-}
-
 .services-shape {
     position: absolute;
     z-index: -1;
@@ -342,9 +318,7 @@ button {
     left: -70px;
 }
 
-.services-main-btn {
-    margin-top: 69px;
-}
+
 
 /* grid block one */
 .grid-content {
@@ -367,7 +341,7 @@ button {
 
 /*-------------------------------------------------------------------------------------------------*/
 .sc-grid.sc-grid-one {
-    background-image: url('/public/images/reservaCita.jpg');
+    background-image: url('../images/reservaCita.jpg');
     background-size: cover;
     background-position:center ;
     padding: 50px;
@@ -375,43 +349,15 @@ button {
 
 
 .sc-grid.sc-grid-one1 {
-    background-image: url('/public/images/garrascuadrado.png');
+    background-image: url('../images/garrascuadrado.png');
     background-color: var(--clr-blue);
     background-size: 600px 600px;
     background-position: center;
     padding: 50px;
 }
 
-/*.form-container {
-    max-width: 500pc;
-    margin: 0 auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  .form-group {
-    display: flex;
-    margin-bottom: 10px; 
-  }
-  
-  .form-group label {
-    width: 100px; 
-    margin-right: 10px;
-    text-align: left;
-  }
 
-  input[type="text"],
-  input[type="tel"],
-  input[type="email"],
-  textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }*/
-  
-  .form-container {
+.form-container {
     max-width: 500pc;
     margin: 0 auto;
     padding: 20px;
@@ -421,7 +367,6 @@ button {
   
   .form-group {
     margin-bottom: 15px;
-    text-align: left;
   }
   
   label {
@@ -437,6 +382,7 @@ button {
     border: 1px solid #ccc;
     border-radius: 5px;
   }
+ 
 /*-------------------------------------------------------------------------------------------------*/
 /* grid two */
 .sc-grid-two {
@@ -465,7 +411,6 @@ button {
 .articles-item {
     box-shadow: 10px 40px 50px 0px #e5e9f666;
     border-radius: 20px;
-    background-color: var(--clr-white);
     max-width: 350px;
 }
 
@@ -486,12 +431,9 @@ button {
     width: calc(33.3333% - 34px);
     overflow: hidden;
     margin: 0 17px;
-    transition: var(--transition-default);
 }
 
-.articles-item:hover {
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
-}
+
 
 .articles-item .item-img {
     height: 246px;
@@ -683,7 +625,7 @@ button {
         /* Necesario para aplicar estilos de fondo */
         padding: 50px;
         /* Ajustar según sea necesario */
-        background-image: url('/public/images/loginmedia-1.png');
+        background-image: url('../images/loginmedia-1.png');
         /* Imagen por defecto */
         transition: background-image 0.3s ease;
         /* Transición suave */
@@ -692,7 +634,7 @@ button {
     }
 
     .nav-link:hover {
-        background-image: url('/public/images/loginmedia-2.png');
+        background-image: url('../images/loginmedia-2.png');
         /* Cambiar a otra imagen */
     }
 
